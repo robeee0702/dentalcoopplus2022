@@ -56,7 +56,7 @@ const Header = ({size}) => {
                   <a href="https://www.facebook.com/kft.dentalcoopplus/"><FacebookIcon style={{fontSize:"32px",color:"blue"}} className="HeaderIcon" /></a>
                 </li>
                 <li>
-                <div className="search" style={{display:"flex",flexDirection:"column",marginTop:"10px",marginRight:"-200px",}}>
+                <div className="search" style={{display:"flex",flexDirection:"column",marginTop:"10px"}}>
                   
                  <h6><PhoneIcon/> +36 94 318 590</h6>
                  <h6><EmailIcon/>info@dentalcoopplus.hu</h6>

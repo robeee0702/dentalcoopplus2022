@@ -48,6 +48,7 @@ header {
   header .search{
     display: flex;
     float: right;
+    margin-right: -200px;
   }
   header ul a {
     display: inline-block;
@@ -102,7 +103,7 @@ header {
     }
     header .search {
       display: flex;
-      margin-right: 190px;
+      margin-right: 0px;
     }
     
     .nav{
@@ -120,7 +121,7 @@ header {
       border-radius: 10px;
       width: 320px;
       height: 520px; 
-      z-index: 2; 
+      z-index: 13; 
     }
     header ul li {
       display: flex;
@@ -172,7 +173,7 @@ header {
     }
     header .search {
       display: flex;
-      margin-right: 190px;
+      margin-right: 0px;
     }
     
     .nav{
@@ -311,7 +312,7 @@ header {
     }
     header .search {
       display: flex;
-      margin-right: 190px;
+      margin-right: 0px;
     }
     
     .nav{
@@ -338,6 +339,9 @@ header {
       margin: 12px;
     }
     
+    .dentalImg {
+      width: 228px;
+    }
     
 
     .navbar-items-icon{
