@@ -10,7 +10,8 @@ const Footer = () => {
             {/* <img src='/images/dental.png' alt='' /> */}
             <h2>NYITVATARTÁS</h2>
             <div>
-              <p>Hétfő-Péntek 09:00-17:00</p>
+              <p>Hétfő-Csütörtök 09:00-17:00</p>
+              <p>Péntek 09:00-15:30</p>
             </div>
           </div>
 
@@ -30,7 +31,7 @@ const Footer = () => {
           <div className='box'>
             <h2>INFORMÁCIÓK</h2>
             <div style={{marginTop:"6px"}}>
-              <a  href="#foo" className="text">Adatvédelmi nyilatkozat</a>
+              <a  href="/dpi" className="text">Adatkezelési tájékoztató</a>
             </div>
             <a href="/impresszum" className="text">Impresszum</a>
             <div style={{marginTop:"6px"}}>

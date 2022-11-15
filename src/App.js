@@ -12,10 +12,11 @@ import ContactPage from "./pages/ContactPage";
 import CartPage from "./pages/CartPage";
 import DetailsPage from "./pages/DetailsPage";
 import React, { useEffect, useState } from "react";
-import Gtc from "./components/Gtc";
 import Privacy from "./components/Privacy";
 import Impressum from "./components/Impressum";
 import Szechenyi from "./components/Szechenyi";
+import PickUpSite from "./components/PickUpSite";
+import Dpi from "./components/Dpi";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -73,10 +74,11 @@ function App() {
             <Route path="/service" component={ServicePage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/contact" component={ContactPage} />
-            <Route path="/aszf" component={Gtc}/>
             <Route path="/privacy" component={Privacy}/>
+            <Route path="/dpi" component={Dpi}/>
             <Route path="/impresszum" component={Impressum}/>
             <Route path="/szechenyi" component={Szechenyi}/>
+            <Route path="/thanks" component={PickUpSite}/>
           </Switch>
           <Footer />
           <CookieConsent

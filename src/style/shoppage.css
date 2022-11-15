@@ -1,3 +1,7 @@
+.shop-container {
+    min-height: 800px;
+}
+
 .shop-col {
     display: grid;
     grid-template-columns: 1fr 2fr 0.3fr;
@@ -14,8 +18,6 @@
     justify-content: center;
     padding-top: 40px;
     margin: 10px;
-    max-height: auto;
-    flex-wrap: wrap;
     padding-left: 24px;
 }
 
@@ -161,6 +163,7 @@
         display: grid;
         grid-template-rows: auto auto;
         width: 100%;
+        margin-top: 180px;
         align-items: center;
         margin-left: -15px;
         flex-wrap: wrap;
@@ -206,7 +209,7 @@
         margin: 0;
         padding: 0;
         padding-left: 0px;
-        margin-top: 140px;
+        margin-top: 235px;
         
     }
     .shop-pagination {

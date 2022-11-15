@@ -44,7 +44,7 @@ const ServicePage = () => {
         >
           <div className="serviceLine"></div>
         </div>
-        <div className="serviceText">
+        <div style={{margin:"20px"}} className="serviceText">
           <p>
             Ügyfeleinkkel hosszú távú együttműködésre törekszünk, ezért a
             kezdetektől segítséget nyújtunk akár a rendelők technikai
@@ -75,8 +75,8 @@ const ServicePage = () => {
               justifyContent: "center",
               alignItems: "center",
               fontSize: "24px",
-              marginBottom: "108px",
-              marginTop: "80px",
+              marginBottom: "68px",
+              marginTop: "60px",
               color: "#0f3d7e",
               border: "none",
             }}
@@ -96,6 +96,84 @@ const ServicePage = () => {
           </a>
         </div>
       </div>
+      <div className="inspection">
+            <h1
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                textAlign: "center",
+                fontSize: "44px",
+                color: "black",
+                fontWeight: "300",
+                lineHeight: "78px",
+                letterSpacing: "0px",
+              }}
+            >
+              KÉZIDARABOK, AUTOKLÁVOK, IMPLANTÁCIÓS <br/>
+              BERENDEZÉSEK JAVÍTÁSA
+            </h1>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div className="serviceLine"></div>
+            </div> 
+            <div style={{margin:"30px",paddingBottom:"65px"}}>
+              <p className="inspectionThings">Küldje el hozzánk kézidarabját és mi akár egy munkanap alatt javítva visszaküldjük!</p>   
+              <p className="inspectionThings">Autoklávok, implantációs berendezések javítása esetén, igény illetve kapacitás függvényében cserekészüléket biztosítunk!</p>   
+            </div>
+
+          </div>
+          <div className="inspection2">
+            <h1
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: "44px",
+                color: "black",
+                fontWeight: "300",
+                lineHeight: "78px",
+                letterSpacing: "0px",
+              }}
+            >
+              IDŐSZAKOS FELÜLVIZSGÁLAT
+            </h1>
+            <h1
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: "34px",
+                color: "black",
+                fontWeight: "300",
+                lineHeight: "48px",
+                letterSpacing: "0px",
+              }}
+            >
+              Orvostechnikai Eszközökre 4/2009(III.17.)EüM Rendelet alapján
+            </h1>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div className="serviceLine"></div>
+            </div> 
+            <div>
+              <p className="inspectionThings"><ArrowRightIcon/> Panoráma röntgen</p>  
+              <p className="inspectionThings"><ArrowRightIcon/> Intraorális röntgen</p>  
+              <p className="inspectionThings"><ArrowRightIcon/> Gőzsterilizátor, Hőlégsterilizátor </p>  
+              <p style={{paddingBottom:"40px"}} className="inspectionThings"><ArrowRightIcon/> Műtőlámpa</p>
+              <h3 style={{display:"flex",justifyContent:"center",padding:"20px",fontWeight:"300",color:"black"}}>Felülvizsgálatra időpontegyeztetés céljából<br></br> keressen minket elérhetőségeinken egyikén.</h3>  
+            </div>
+
+          </div>
       <div className="serviceContainer2">
         <h1
           style={{
@@ -677,53 +755,7 @@ const ServicePage = () => {
               </a>
             </div>
           </div>
-          <div className="inspection">
-            <h1
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                fontSize: "44px",
-                color: "black",
-                fontWeight: "300",
-                lineHeight: "78px",
-                letterSpacing: "0px",
-              }}
-            >
-              IDŐSZAKOS FELÜLVIZSGÁLAT
-            </h1>
-            <h1
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                fontSize: "34px",
-                color: "black",
-                fontWeight: "300",
-                lineHeight: "48px",
-                letterSpacing: "0px",
-              }}
-            >
-              Orvostechnikai Eszközökre 4/2009(III.17.)EüM Rendelet alapján
-            </h1>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <div className="serviceLine"></div>
-            </div>
-            <div>
-              <p className="inspectionThings"><ArrowRightIcon/> Panoráma röntgen</p>  
-              <p className="inspectionThings"><ArrowRightIcon/> Intraorális röntgen</p>  
-              <p className="inspectionThings"><ArrowRightIcon/> Gőzsterilizátor, Hőlégsterilizátor </p>  
-              <p style={{paddingBottom:"40px"}} className="inspectionThings"><ArrowRightIcon/> Műtőlámpa</p>
-              <h3 style={{display:"flex",justifyContent:"center",padding:"20px",fontWeight:"300",color:"black"}}>Felülvizsgálatra időpontegyeztetés céljából<br></br> keressen minket elérhetőségeinken egyikén.</h3>  
-            </div>
-
-          </div>
+       
         </div>
       </div>
     </div>

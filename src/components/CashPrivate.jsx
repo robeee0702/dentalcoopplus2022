@@ -2,6 +2,7 @@ import { Card, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "../style/privateship.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const CashPrivate = (cartData) => {
 
@@ -19,6 +20,12 @@ const CashPrivate = (cartData) => {
 
   const [isDisabled, setIsDisabled] = useState(true);
   const [checkButton, setCheckButton] = useState(false);
+
+
+  const manageSite = useHistory();
+
+
+
 
   const canBeSubmitted = () => {
     return checkButton ? setIsDisabled(true) : setIsDisabled(false);
@@ -84,9 +91,7 @@ const CashPrivate = (cartData) => {
         .then((res) => {
           alert("A megrendelés sikeres volt");
 
-          console.log(res);
-          window.location.reload();
-        
+          manageSite.push("/thanks")
         })
         .catch((err) => {
           console.log(err);
@@ -159,8 +164,8 @@ const CashPrivate = (cartData) => {
         </span>
         <div style={{margin:"16px"}}>
           <input type="checkbox" onClick={onCheckboxClick} />
-          <span>Egyetértek az általános üzleti feltételekkel és elfogadom a személyes adatok feldolgozását a megrendelések feldolgozásához. 
-            Tudomásul veszem, hogy a megrendelés leadás fizetési kötelezettséget von maga után.**
+          <span>Kijelentem, hogy megismerkedtem a fiókomra vonatkozó valamint az  Adatkezelési Tájékoztató oldalán található, 
+            a személyes adatok feldolgozására vonatkozó szabályzatok tartalmaival.* (Hozzájárulás szükséges)
           </span>
         </div>
         <button type="submit" disabled={isDisabled}  className="cartButton">Megrendelés</button>

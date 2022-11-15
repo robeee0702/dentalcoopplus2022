@@ -2,6 +2,7 @@ import { Card, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "../style/privateship.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const CompanyShip = (cartData) => {
 
@@ -26,12 +27,16 @@ const CompanyShip = (cartData) => {
   const [bpostalCode, setPostalCodeb] = useState("");
   const [checked, setChecked] = useState(false);
 
+  
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [checkButton, setCheckButton] = useState(false);
+  
+  const manageSite = useHistory();
+  
+  
   const handleCheckChange = () => {
     setChecked(!checked);
   };
-
-  const [isDisabled, setIsDisabled] = useState(true);
-  const [checkButton, setCheckButton] = useState(false);
 
   const canBeSubmitted = () => {
     return checkButton ? setIsDisabled(true) : setIsDisabled(false);
@@ -120,11 +125,10 @@ const CompanyShip = (cartData) => {
             "Content-type": "application/json",
           },
         })
-        .then((res) => {
+        .then(() => {
           alert("A megrendelés sikeres volt");
 
-          console.log(res);
-          window.location.reload();
+          manageSite.push("/thanks")
         })
         .catch((err) => {
           console.log(err);
@@ -136,7 +140,7 @@ const CompanyShip = (cartData) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} method="post">
+      <form onSubmit={handleSubmit}  method="post">
         <Card className="shippingCardPerson">
           <h5>Számlázási adatok:</h5>
           <TextField
@@ -267,11 +271,12 @@ const CompanyShip = (cartData) => {
         </select>
         <div style={{margin:"16px"}}>
           <input type="checkbox" onClick={onCheckboxClick} />
-          <span>Egyetértek az általános üzleti feltételekkel és elfogadom a személyes adatok feldolgozását a megrendelések feldolgozásához. 
-            Tudomásul veszem, hogy a megrendelés leadás fizetési kötelezettséget von maga után.**
+          <span>Kijelentem, hogy megismerkedtem a fiókomra vonatkozó valamint az  Adatkezelési Tájékoztató oldalán található,
+             a személyes adatok feldolgozására vonatkozó szabályzatok tartalmaival.* (Hozzájárulás szükséges)
           </span>
         </div>
-        <button type="submit" disabled={isDisabled} className="cartButton">
+        <button type="submit" disabled={isDisabled}  
+        className="cartButton">
           Megrendelés
         </button>
       </form>

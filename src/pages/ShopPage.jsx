@@ -24,13 +24,13 @@ const ShopPage = ({ handleClick }) => {
   const pagesVisited = pageNumber * productPerPage;
 
   const displayProducts = data
-    .filter((value) => {
+    .filter((value,i) => {
       if (search === "") {
         return value;
       } else if (
-        value.category.toLowerCase().includes(search.toLowerCase()) ||
-        value.desc.toLowerCase().includes(search.toLowerCase()) ||
-        value.name.toLowerCase().includes(search.toLowerCase())
+        value.category?.toLowerCase().includes(search.toLowerCase()) ||
+        value.desc?.toLowerCase().includes(search.toLowerCase()) ||
+        value.name?.toLowerCase().includes(search.toLowerCase())
       ) {
         return value;
       }
@@ -54,6 +54,7 @@ const ShopPage = ({ handleClick }) => {
     setData(newProduct);
   };
 
+
   return (
     <div className="shop-container">
       <div className="shop-col">
@@ -65,7 +66,9 @@ const ShopPage = ({ handleClick }) => {
           <button
             style={{ left: 0, color: "red",marginLeft: "-120px"  }}
             className="shop-btn"
-            onClick={() => setData(products)}
+            onClick={() => products.filter(function(value) {
+              return products 
+            })}
           >
             AKCIÓK
             <ChevronRightIcon />

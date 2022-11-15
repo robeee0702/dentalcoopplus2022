@@ -5,15 +5,24 @@ import "react-toastify/dist/ReactToastify.css";
 import "../style/products.css";
 import { Link } from "react-router-dom";
 
+
 const Products = ({ item, handleClick }) => {
-  // const myPrice = () => {
-  //   if(item.price===0){
-  //     item.price===
-  //   }
-  // }
+
+  // const [rates, setRates] = useState([]);
+
+  // useEffect(() => {
+  //   axios.get('http://data.fixer.io/api/latest?access_key=8re8n4OLqt14vZ850q2Z7tusJTnmIC2t')
+  //   .then(response => {
+  //     setRates(response.data.rates);
+  //   })
+  // },[]);
+
+
+  // console.log(rates)
+
 
   const format = (price) => {
-    return Number(price)
+    return Number(price*1)     // SET PRICE EURO CONVERTER !
       .toFixed(2)
       .replace(/\d(?=(\d{3})+\.)/g, "$&,");
   };
@@ -24,6 +33,7 @@ const Products = ({ item, handleClick }) => {
         <h5 style={{ fontSize: "18px", fontWeight: "400", marginTop: "14px" }}>
           {item.subcategory}
         </h5>
+        {/* <input type="text" value={rates}></input> */}
         <div
           style={{
             justifyContent: "center",

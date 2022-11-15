@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../style/privateship.css";
 import axios from "axios";
 import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 const PrivateShip = (cartData) => {
 
@@ -35,6 +36,10 @@ const PrivateShip = (cartData) => {
 
   const [isDisabled, setIsDisabled] = useState(true);
   const [checkButton, setCheckButton] = useState(false);
+
+  const manageSite = useHistory();
+
+
 
   const canBeSubmitted = () => {
     return checkButton ? setIsDisabled(true) : setIsDisabled(false);
@@ -130,8 +135,7 @@ const PrivateShip = (cartData) => {
         })
         .then((res) => {
           alert("A megrendelés sikeres volt");
-          console.log(res);
-          window.location.reload();
+          manageSite.push("/thanks")
         })
         .catch((err) => {
           console.log(err);
@@ -215,10 +219,7 @@ const PrivateShip = (cartData) => {
         <div className={`checkbox ${!checked ? "checkbox--active" : ""}`}>
           <Card className="shippingCardPerson" style={{ marginTop: "30px" }}>
             <h5>Szállítási adatok:</h5>
-            <span style={{ margin: "15px", fontSize: "14px" }}>
-              *Kérjük a számlázási adatokat abban esetben töltse ki ha nem
-              egyezik szállítási adatokkal!
-            </span>
+          
             <TextField
               style={{ margin: "5px 10px 15px 10px" }}
               type="text"
@@ -273,8 +274,8 @@ const PrivateShip = (cartData) => {
 
         <div style={{margin:"16px"}}>
           <input type="checkbox" onClick={onCheckboxClick} />
-          <span>Egyetértek az általános üzleti feltételekkel és elfogadom a személyes adatok feldolgozását a megrendelések feldolgozásához. 
-            Tudomásul veszem, hogy a megrendelés leadás fizetési kötelezettséget von maga után.**
+          <span>Kijelentem, hogy megismerkedtem a fiókomra vonatkozó valamint az  Adatkezelési Tájékoztató oldalán található,
+             a személyes adatok feldolgozására vonatkozó szabályzatok tartalmaival.* (Hozzájárulás szükséges)
           </span>
         </div>
         <button
